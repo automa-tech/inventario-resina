@@ -556,6 +556,60 @@
             .login-logo { width: 210px; }
         }
 
+    
+        /* ============================================================
+           AJUSTES FINOS - TABLET / CAMPOS / TIPOGRAFIA
+        ============================================================ */
+
+        /* Campos nunca ultrapassam a célula disponível */
+        input[type="number"],
+        input[type="text"].table-input,
+        select.select-resina {
+            box-sizing: border-box !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        /* Remove negrito dos resultados intermediários.
+           O total físico no final continua em negrito. */
+        .res-val {
+            font-weight: 400 !important;
+        }
+
+        tr.total-fisico-row .res-val {
+            font-weight: 700 !important;
+        }
+
+        /* Data/Hora mais leve */
+        #current-time {
+            font-weight: 400 !important;
+        }
+
+        /* Botões com tipografia mais leve e mais espaço entre eles */
+        .no-print {
+            gap: 16px !important;
+        }
+
+        .btn-pdf,
+        .btn-email,
+        .btn-clear {
+            font-weight: 500 !important;
+            margin: 0 !important;
+        }
+
+        @media (max-width: 900px) {
+            .no-print {
+                gap: 12px !important;
+                padding: 12px !important;
+            }
+
+            .btn-pdf,
+            .btn-email,
+            .btn-clear {
+                padding: 11px 16px !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -978,11 +1032,11 @@
                 <!-- =========================
                      TOTAL
                 ========================= -->
-                <tr class="bg-grey">
+                <tr class="bg-grey total-fisico-row">
 
                     <td
                         colspan="9"
-                        style="text-align:right; font-weight:bold;"
+                        style="text-align:right; font-weight:600;"
                     >
                         SOMA TOTAL FÍSICA:
                     </td>
@@ -1630,7 +1684,15 @@
 
                     document.getElementById('current-time')
                         .innerText =
-                        new Date().toLocaleString();
+                        new Date().toLocaleString('pt-BR', {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            second: '2-digit',
+                            hour12: false
+                        });
 
                 }, 1000);
 
