@@ -324,6 +324,238 @@
                 -webkit-print-color-adjust: exact;
             }
         }
+    
+        /* ===== IDENTIDADE VISUAL SPILTAG ===== */
+        :root {
+            --accent: #9f1d2f;
+            --accent-dark: #7d1625;
+            --cream: #f6f0e7;
+            --surface: #fffdf9;
+            --surface-2: #fbf5ed;
+            --text: #332b27;
+            --muted: #7e7068;
+            --border-soft: #e8d9cb;
+            --shadow: 0 8px 24px rgba(79, 48, 35, 0.10);
+            --shadow-soft: 0 3px 12px rgba(79, 48, 35, 0.08);
+        }
+
+        body {
+            font-family: "Segoe UI", Calibri, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+        }
+
+        #login-screen {
+            background: linear-gradient(135deg, #f7f2eb 0%, #eee3d6 100%);
+            padding: 24px;
+        }
+
+        .login-box {
+            width: 430px;
+            max-width: 94vw;
+            padding: 38px 38px 34px;
+            border-radius: 22px;
+            border: 1px solid var(--border-soft);
+            border-top: 6px solid var(--accent);
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .login-brand {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .login-logo {
+            width: 230px;
+            max-width: 82%;
+            height: 100px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .login-box p {
+            margin: 8px 0 28px;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: .5px;
+            color: var(--muted);
+            text-transform: uppercase;
+        }
+
+        .login-box input {
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 15px 16px;
+            margin: 8px 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text);
+            outline: none;
+        }
+
+        .login-box input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(159,29,47,.10);
+        }
+
+        .btn-login {
+            border-radius: 12px;
+            border: 0;
+            font-weight: 650;
+            box-shadow: 0 4px 12px rgba(125,22,37,.16);
+        }
+
+        #app-content {
+            background: var(--cream);
+            padding: 18px;
+            min-height: 100vh;
+        }
+
+        .no-print {
+            background: var(--surface);
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            padding: 12px;
+            margin: 0 0 14px;
+        }
+
+        .btn-pdf, .btn-email, .btn-clear {
+            border: 0;
+            border-radius: 10px;
+            padding: 11px 18px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(79,48,35,.08);
+        }
+
+        .btn-pdf { background: var(--accent); }
+        .btn-email { background: var(--accent-dark); }
+        .btn-clear { background: #9b887a; }
+
+        .container {
+            background: var(--surface);
+            border: 1px solid var(--border-soft);
+            border-radius: 18px;
+            box-shadow: var(--shadow-soft);
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 0;
+            background: var(--surface);
+        }
+
+        th, td {
+            border-color: var(--border-soft);
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .bg-spiltag {
+            background: var(--accent) !important;
+            color: #fff !important;
+            font-weight: 600 !important;
+        }
+
+        .bg-grey {
+            background: var(--surface-2) !important;
+            color: var(--text) !important;
+            font-weight: 600 !important;
+        }
+
+        .resp-label {
+            background: var(--accent-dark) !important;
+            color: #fff !important;
+            font-weight: 600 !important;
+        }
+
+        .sub-cod {
+            color: rgba(255,255,255,.78) !important;
+        }
+
+        .img-logo-tabela {
+            max-width: 150px;
+            max-height: 78px;
+            object-fit: contain;
+        }
+
+        #current-time {
+            background: var(--surface-2);
+            color: var(--accent-dark);
+            font-size: 15px;
+            font-weight: 600 !important;
+        }
+
+        .editable {
+            background: #fff !important;
+            border: 1px solid var(--border-soft) !important;
+            border-radius: 8px;
+        }
+
+        input[type="number"],
+        input[type="text"].table-input {
+            color: var(--text);
+            font-weight: 500;
+            outline: none;
+            padding: 5px 7px;
+        }
+
+        select.select-resina {
+            border: 1px solid var(--border-soft);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--text);
+            padding: 5px 6px;
+            font-weight: 500;
+        }
+
+        input[type="checkbox"] {
+            accent-color: var(--accent);
+            transform: scale(1.08);
+        }
+
+        #custom-alert {
+            background: rgba(54,38,31,.58);
+            backdrop-filter: blur(2px);
+        }
+
+        .alert-content {
+            background: var(--surface);
+            border: 1px solid var(--border-soft);
+            border-top: 6px solid var(--accent);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+        }
+
+        .alert-content h2 {
+            color: var(--accent-dark);
+            font-weight: 600;
+        }
+
+        .alert-content p {
+            color: var(--muted);
+        }
+
+        .btn-alert-ok {
+            background: var(--accent);
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            #app-content { padding: 10px; }
+            .login-box { padding: 30px 24px; }
+            .login-logo { width: 210px; }
+        }
+
     </style>
 </head>
 
@@ -345,7 +577,9 @@
     ========================= -->
     <div id="login-screen">
         <div class="login-box">
-            <h1>SPILTAG</h1>
+            <div class="login-brand">
+                <img src="icon-512.png" alt="Spiltag" class="login-logo">
+            </div>
             <p>INVENTÁRIO DE RESINAS</p>
 
             <input
